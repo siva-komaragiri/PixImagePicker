@@ -1,1 +1,2 @@
+include ':pix2'
 include ':app', ':pix'
