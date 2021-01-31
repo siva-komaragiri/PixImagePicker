@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.fxn.adapters.MyAdapter
 import com.fxn.pix.Options
 import com.fxn.pix.Pix
+import com.fxn.pix2.Pix2
 import com.fxn.utility.PermUtil
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -41,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener {
             options.preSelectedUrls = returnValue
             Pix.start(this@MainActivity, options)
+        }
+        fab2.setOnClickListener {
+            options.preSelectedUrls = returnValue
+            Pix2.start(this@MainActivity, 10)
         }
     }
 

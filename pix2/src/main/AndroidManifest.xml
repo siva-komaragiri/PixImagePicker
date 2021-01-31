@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fxn.pix2">
 
-    <application>
-        <activity android:name=".Pix2"></activity>
+    <application android:largeHeap="true">
+        <activity
+            android:name=".Pix2"
+            android:theme="@style/PixAppTheme"></activity>
     </application>
 
 </manifest>
