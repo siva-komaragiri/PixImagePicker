@@ -445,12 +445,7 @@ public class Pix extends AppCompatActivity implements View.OnTouchListener {
             @Override
             public void onPictureTaken(PictureResult result) {
                 File dir = null;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                    dir = getExternalFilesDir(options.getPath());
-                } else {
-                    dir = Environment.getExternalStoragePublicDirectory(options.getPath());
-                }
-
+                dir = getExternalFilesDir(options.getPath());
                 if (!dir.exists()) {
                     dir.mkdirs();
                 }
@@ -638,11 +633,7 @@ public class Pix extends AppCompatActivity implements View.OnTouchListener {
                 }
                 camera.setMode(Mode.VIDEO);
                 File dir = null;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                    dir = getExternalFilesDir(options.getPath());
-                } else {
-                    dir = Environment.getExternalStoragePublicDirectory(options.getPath());
-                }
+                dir = getExternalFilesDir(options.getPath());
                 if (!dir.exists()) {
                     dir.mkdirs();
                 }
