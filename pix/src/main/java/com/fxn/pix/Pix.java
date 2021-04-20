@@ -356,6 +356,7 @@ public class Pix extends AppCompatActivity implements View.OnTouchListener {
         }
         Intent resultIntent = new Intent();
         resultIntent.putStringArrayListExtra(IMAGE_RESULTS, list);
+        resultIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         setResult(Activity.RESULT_OK, resultIntent);
         finish();
     }
